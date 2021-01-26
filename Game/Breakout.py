@@ -4,6 +4,7 @@ from Game import *
 from Game.Scenes import *
 from Game.Shared import GameConstants
 
+
 class Breakout:
 
     def __init__(self):
@@ -41,7 +42,16 @@ class Breakout:
         self.__sound = ()
 
     def start(self):
-        pass
+        while 1:
+            self.__clock.tick(100)
+
+            self.screen.fill((0, 0, 0))
+
+            currentScene = self.__scenes[self.__currentScene]
+            currentScene.handleEvents(pygame.event.get())
+            currentScene.render()
+
+            pygame.display.update()
 
     def changeScene(self, scene):
         pass
