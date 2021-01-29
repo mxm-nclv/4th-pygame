@@ -1,3 +1,4 @@
+import pygame
 from Game.Shared import *
 
 
@@ -32,7 +33,7 @@ class Ball(GameObject):
         pass
 
     def updatePosition(self):
-        pass
+        self.setPosition(pygame.mouse.get_pos())
 
     def isBallDead(self):
         pass
