@@ -8,6 +8,7 @@ class GameConstants:
     SCREEN_SIZE = [800, 600]
 
     SPRITE_BALL = os.path.join("Assets", "ball.png")
+    SPRITE_PAD = os.path.join("Assets", "pad.png")
     SPRITE_BRICK = os.path.join("Assets", "standard.png")
     SPRITE_SPEEDBRICK = os.path.join("Assets", "speed.png")
     SPRITE_LIFEBRICK = os.path.join("Assets", "life.png")

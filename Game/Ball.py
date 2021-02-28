@@ -47,7 +47,7 @@ class Ball(GameObject):
         elif position[1] + size[1] > objectPosition[1] and \
                                 position[1] + size[1] < objectPosition[1] + objectSize[1] and \
                         position[0] > objectPosition[0] and \
-                        position[0] < objectPosition[0] - objectSize[0]:
+                        position[0] < objectPosition[0] + objectSize[0]:
             self.setPosition((position[0], objectPosition[1] - objectSize[1]))
             self.__direction[1] *= -1
 
@@ -62,6 +62,14 @@ class Ball(GameObject):
             self.__direction[1] *= -1
 
     def updatePosition(self):
+
+        if not self.isInMotion():
+            padPosition = self.__game.getPad().getPosition()
+            self.setPosition((
+                padPosition[0] + (GameConstants.PAD_SIZE[0] / 2),
+                GameConstants.SCREEN_SIZE[1] - GameConstants.PAD_SIZE[1] - GameConstants.BALL_SIZE[1]
+            ))
+            return
 
         position = self.getPosition()
         size = self.getSize()
