@@ -8,7 +8,7 @@ class Highscore:
     def __init__(self):
         self.__highscore = self.load()
 
-    def getScore(self):
+    def getScores(self):
         return self.__highscore
 
     def load(self):
