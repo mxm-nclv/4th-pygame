@@ -12,7 +12,7 @@ class Breakout:
         self.__score = 0
 
         self.__level = Level(self)
-        self.__level.load(0)
+        self.__level.loadRandom()
 
         self.__pad = Pad((GameConstants.SCREEN_SIZE[0]/2,
                           GameConstants.SCREEN_SIZE[1] - GameConstants.PAD_SIZE[1]),
