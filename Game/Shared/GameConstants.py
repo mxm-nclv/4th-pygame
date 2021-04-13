@@ -13,6 +13,20 @@ class GameConstants:
     SPRITE_SPEEDBRICK = os.path.join("Assets", "speed.png")
     SPRITE_LIFEBRICK = os.path.join("Assets", "life.png")
     SPRITE_HIGHSCORE = os.path.join("Assets", "highscore.png")
+    
+    SOUND_FILE_HIT_BRICK = os.path.join("Assets", "BrickHit.wav")
+    SOUND_FILE_HIT_BRICK_LIFE = os.path.join("Assets", "ExtraLife.wav")
+    SOUND_FILE_HIT_BRICK_SPEED = os.path.join("Assets", "SpeedUp.wav")
+    SOUND_FILE_HIT_WALL = os.path.join("Assets", "WallBounce.wav")
+    SOUND_FILE_HIT_PAD = os.path.join("Assets", "PadBounce.wav")
+    SOUND_FILE_GAMEOVER = os.path.join("Assets", "GameOver.wav")
+
+    SOUND_GAMEOVER = 0
+    SOUND_HIT_BRICK = 1
+    SOUND_HIT_BRICK_LIFE = 2
+    SOUND_HIT_BRICK_SPEED = 3
+    SOUND_HIT_WALL = 4
+    SOUND_HIT_PAD = 5
 
     PLAYING_SCENE = 0
     GAMEOVER_SCENE = 1
