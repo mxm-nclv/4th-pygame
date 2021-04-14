@@ -13,6 +13,7 @@ class GameConstants:
     SPRITE_SPEEDBRICK = os.path.join("Assets", "speed.png")
     SPRITE_LIFEBRICK = os.path.join("Assets", "life.png")
     SPRITE_HIGHSCORE = os.path.join("Assets", "highscore.png")
+    SPRITE_MENU = os.path.join("Assets", "menu.png")
     
     SOUND_FILE_HIT_BRICK = os.path.join("Assets", "BrickHit.wav")
     SOUND_FILE_HIT_BRICK_LIFE = os.path.join("Assets", "ExtraLife.wav")
