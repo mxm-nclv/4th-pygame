@@ -8,9 +8,10 @@ class MenuScene(Scene):
     def __init__(self, game):
         super(MenuScene, self).__init__(game)
 
-        self.addText("F1 - Start Game", x = 300, y = 200, size = 30)
-        self.addText("F2 - Highscore", x = 300, y = 240, size = 30)
-        self.addText("F3 - Quit", x = 300, y = 280, size = 30)
+        yText = 200
+        self.addText("F1 - Start Game", x = 300, y = yText, size = 30)
+        self.addText("F2 - Highscore", x = 300, y = yText + 1 * GameConstants.TEXT_MENU_LINE_SPACE, size = 30)
+        self.addText("F3 - Quit", x = 300, y = yText + 2 * GameConstants.TEXT_MENU_LINE_SPACE, size = 30)
 
         self.__menuSprite = pygame.image.load(GameConstants.SPRITE_MENU)
 

@@ -33,3 +33,5 @@ class GameConstants:
     GAMEOVER_SCENE = 1
     HIGHSCORE_SCENE = 2
     MENU_SCENE = 3
+
+    TEXT_MENU_LINE_SPACE = 40
