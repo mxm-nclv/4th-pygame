@@ -8,7 +8,7 @@ from Game.Shared import GameConstants
 class Breakout:
 
     def __init__(self):
-        self.__lives = 1
+        self.__lives = 5
         self.__score = 0
 
         self.__level = Level(self)

@@ -26,7 +26,7 @@ class Level:
 
     def loadNextLevel(self):
         self.__currentLevel += 1
-        fileName = os.path.join("Assets", "Levels", "level" + str(self.__currentLevel) + ".dat")
+        fileName = os.path.join("Game", "Assets", "Levels", "level" + str(self.__currentLevel) + ".dat")
 
         if not os.path.exists(fileName):
             self.loadRandom()
@@ -73,7 +73,7 @@ class Level:
 
         x, y = 0, 0
 
-        for line in fileinput.input(os.path.join("Assets", "Levels", "level" + str(level) + ".dat")):
+        for line in fileinput.input(os.path.join("Game", "Assets", "Levels", "level" + str(level) + ".dat")):
             for currentBrick in line:
                 if currentBrick == "1":
                     brick = Brick([x, y], pygame.image.load(GameConstants.SPRITE_BRICK), self.__game)

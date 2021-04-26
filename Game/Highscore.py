@@ -1,6 +1,7 @@
 import hashlib
 import fileinput
 import operator
+import os
 
 
 class Highscore:
@@ -13,7 +14,7 @@ class Highscore:
 
     def load(self):
         highscore = []
-        for line in fileinput.input("highscore.dat"):
+        for line in fileinput.input(os.path.join("Game", "highscore.dat")):
             name, score, md5 = line.split('[::]')
             md5 = md5.replace('\n', '')
 
@@ -29,7 +30,7 @@ class Highscore:
         hash = hashlib.md5((str(name + str(score) + "pygame")).encode('utf-8'))
         self.__highscore.append([name, str(score), hash.hexdigest()])
 
-        f = open("highscore.dat", 'w')
+        f = open(os.path.join("Game", "highscore.dat"), 'w')
         for name, score, md5 in self.__highscore:
             f.write(str(name) + "[::]" + str(score) + "[::]" + str(md5) + "\n")
 
